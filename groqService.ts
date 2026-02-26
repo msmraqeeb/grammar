@@ -1,7 +1,8 @@
 import Groq from "groq-sdk";
 import { Question } from "./types";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY, dangerouslyAllowBrowser: true });
+const apiKey = import.meta.env.VITE_GROQ_API_KEY || "";
+const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
 export async function fetchQuestions(topic: string, count: number): Promise<Question[]> {
   // We fetch in batches of 10 to maintain quality and avoid timeouts
@@ -41,12 +42,12 @@ export async function fetchQuestions(topic: string, count: number): Promise<Ques
       if (jsonStr) {
         const parsed = JSON.parse(jsonStr);
         if (parsed.questions && Array.isArray(parsed.questions)) {
-            allQuestions = [...allQuestions, ...parsed.questions];
+          allQuestions = [...allQuestions, ...parsed.questions];
         } else if (Array.isArray(parsed)) {
-            allQuestions = [...allQuestions, ...parsed];
+          allQuestions = [...allQuestions, ...parsed];
         }
       }
-      
+
       if (allQuestions.length >= count) break;
     }
 
