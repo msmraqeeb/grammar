@@ -191,7 +191,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 transition-colors">
         <div className="max-w-6xl mx-auto px-4 text-center text-slate-500 dark:text-slate-400 text-sm">
-          &copy; {new Date().getFullYear()} GrammarMaster Pro. Powered by Groq AI.
+          &copy; {new Date().getFullYear()} GrammarMaster Pro. Developed by: <a href="https://shakilmahmud.vercel.app" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Shakil Mahmud</a>
         </div>
       </footer>
     </div>
