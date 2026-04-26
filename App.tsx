@@ -74,10 +74,11 @@ export default function App() {
             className="flex items-center gap-2 cursor-pointer group"
             onClick={handleBackToHome}
           >
-            <div className="bg-indigo-600 text-white p-2 rounded-lg group-hover:bg-indigo-700 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
-            </div>
-            <h1 className="text-xl font-bold text-slate-800 dark:text-white">GrammarMaster<span className="text-indigo-600">Pro</span></h1>
+            <img 
+              src="/images/GrammarMasterPro-logo.png" 
+              alt="GrammarMaster Pro Logo" 
+              className="h-14 w-auto object-contain" 
+            />
           </div>
 
           <div className="flex items-center gap-4">
